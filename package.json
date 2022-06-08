@@ -1,0 +1,28 @@
+{
+    "name": "jsonresume-element",
+    "version": "0.0.0",
+    "description": "JsonResume.org formatted resume web component",
+    "main": "jsonresume-element.js",
+    "scripts": {
+        "start": "npx @web/dev-server --node-resolve",
+        "test": "exit 0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sashafirsov/jsonresume-element.git"
+    },
+    "keywords": [
+        "webcomponent",
+        "jsonresume-theme"
+    ],
+    "author": "Sasha Firsov",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/sashafirsov/jsonresume-element/issues"
+    },
+    "homepage": "https://github.com/sashafirsov/jsonresume-element#readme",
+    "dependencies": {
+        "light-dom-element": "^0.0.7",
+        "shadow-dom-element": "^0.0.7"
+    }
+}
