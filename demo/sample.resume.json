@@ -1,0 +1,215 @@
+{
+    "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+    "basics": {
+        "name": "Pikachu",
+        "label": "Programmer Familiar",
+        "image": "https://upload.wikimedia.org/wikipedia/en/a/a6/Pok%C3%A9mon_Pikachu_art.png",
+        "email": "Pikachu@Nintendo.com",
+        "phone": "(555) 555-4321",
+        "url": "https://en.wikipedia.org/wiki/Pikachu",
+        "summary": "I am famous Pokémon with super strong technical skills (turning on computer without direct contact) as well as interpersonal skills (living in every smartphone). I am eager to be challenged in order to grow and increase my level and skills.",
+        "location": {
+            "address": "Refuses to stay in its Poké Ball, and instead follows the main character around",
+            "postalCode": "CA 94556",
+            "city": "San Francisco",
+            "countryCode": "US",
+            "region": "California"
+        },
+        "profiles": [
+            {
+                "network": "Twitter",
+                "username": "DetPikachuMovie",
+                "url": "https://twitter.com/DetPikachuMovie"
+            },
+            {
+                "network": "SoundCloud",
+                "username": "pikachu",
+                "url": "https://soundcloud.com/tags/pikachu"
+            },
+            {
+                "network": "instagram",
+                "username": "pikachudigitals",
+                "url": "https://www.instagram.com/pikachudigitals/?hl=en"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "Great Detective Pikachu",
+            "location": "Nintendo",
+            "description": "The game is a spin-off of the Pokémon franchise, in which the player works with a talking Pikachu to solve various mysteries.",
+            "position": "Detective",
+            "url": "https://en.wikipedia.org/wiki/Detective_Pikachu_(video_game)",
+            "startDate": "2016-02-01",
+            "endDate": "2018-04-01",
+            "summary": "The game begins with a peculiar talking Pikachu, who claims to be a great detective. One day, Pikachu encounters a boy named Tim Goodman, who is able to understand what he is saying.",
+            "highlights": [
+                "retrieving a stolen necklace from thieving Aipom.",
+                "Harry had gone missing following a mysterious car crash that happened the same time Pikachu got amnesia.",
+                "Tim and Pikachu deduce that Harry was last seen trying to investigate Litwick Cave, and arrive just in time to rescue GNN reporter Meiko Okamoto and her assistant Emilia Christie from a rampaging Glalie"
+            ]
+        },
+        {
+            "name": "Pokémon Detective Pikachu",
+            "location": "Ryme City",
+            "description": "Pokémon Detective Pikachu[c] is a 2019 American mystery film directed by Rob Letterman. Based on the Pokémon franchise, the film is a loose adaptation of the 2016 video game Detective Pikachu.",
+            "position": "Detective",
+            "url": "https://en.wikipedia.org/wiki/Detective_Pikachu_(film)",
+            "startDate": "2018-01-01",
+            "endDate": "2019-05-03",
+            "summary": "Tim and Pikachu are contacted by Howard Clifford, the founder of Clifford Industries and creator of Ryme City. Clifford reveals that Harry was abducted by a genetically engineered Pokémon called Mewtwo, who erased Pikachu's memory of the incident. He warns Tim that his son Roger is behind the creation of the R gas. Tim and Pikachu recruit aspiring journalist Lucy Stevens and her Psyduck and travel to the abandoned genetics lab Harry was investigating, where they are attacked by genetically enhanced Greninja. A Bulbasaur leads them to Mewtwo. Pikachu remembers that he helped Mewtwo escape from the lab and believes he was responsible for betraying Harry. Not trusting himself, he leaves Tim.",
+            "highlights": [
+                "Tim accidentally releases a mysterious purple gas known as \"R\" from a vial he finds in Harry's office",
+                "Pikachu believes that Harry survived the crash as the police never found his body.",
+                "Tim and Pikachu are contacted by Howard Clifford, the founder of Clifford Industries and creator of Ryme City.",
+                "Pikachu remembers that he helped Mewtwo escape from the lab and believes he was responsible for betraying Harry.",
+                "Pikachu finds evidence that it was the Greninja, not Mewtwo, who were responsible for the crash. ",
+                "Mewtwo had decided to heal Harry's wounded body while Pikachu had volunteered to have himself fuse his consciousness with Harry's to continue their investigation, the experience erasing both their memories."
+            ]
+        }
+    ],
+    "volunteer": [
+        {
+            "organization": "AmericaUkraine rescue",
+            "position": "volunteer",
+            "url": "https://gnews.org/post/p2489125",
+            "startDate": "2022-05-07",
+            "endDate": "2022-05-07",
+            "summary": "An American volunteer in Pikachu costume brings some joy to refugees",
+            "highlights": [
+                "Awarded 'Teacher of the Month'"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Pokémon school",
+            "url": "https://www.ou.edu/",
+            "area": "Philosophy",
+            "studyType": "Doctor",
+            "startDate": "2011-06-01",
+            "endDate": "2014-01-01",
+            "score": "5.1 GPA",
+            "courses": [
+                "Lightning Rod",
+                "Foe paralyzer"
+            ]
+        }
+    ],
+    "awards": [
+        {
+            "title": "The Best Pokemon in the world",
+            "date": "2014-11-01",
+            "awarder": "Game Players",
+            "summary": "Most adorable character among Pokémon species"
+        },
+        {
+            "title": "Win 100500 battles all over the world"
+        }
+    ],
+    "publications": [
+        {
+            "name": "Pikachu Books",
+            "publisher": "Amazon",
+            "releaseDate": "2014-10-01",
+            "url": "https://www.amazon.com/pikachu-Books/s?k=pikachu",
+            "summary": "Pikachu: Pokemon Notebook, Journal, Diary, Notes, White Lined Pages noteook, Gift For Teens, Girls, Boys, Kids, Kindergarten, Grades K-2, School Students"
+        }
+    ],
+    "skills": [
+        {
+            "name": "Thunder Armor move",
+            "level": "Master",
+            "keywords": [
+                "Thunder attack",
+                "Swellow",
+                "Zeus's butt"
+            ]
+        },
+        {
+            "name": "Counter Shield move",
+            "level": "Master",
+            "keywords": [
+                "sleep",
+                "Hypnosis"
+            ]
+        }
+    ],
+    "languages": [
+        {   "language": "Japanese",
+            "fluency": "Native"
+        },
+        {   "language": "French",
+            "fluency": "Intermediate high"
+        },
+        {   "language": "Spanish",
+            "fluency": "beginner"
+        },
+        {   "language": "German",
+            "fluency": "beginner"
+        },
+        {   "language": "Italian",
+            "fluency": "beginner"
+        },
+        {   "language": "Korean",
+            "fluency": "native"
+        }
+    ],
+    "interests": [
+        {
+            "name": "Wonder",
+            "keywords": [
+                "Swellow",
+                "flying"
+            ]
+        }
+    ],
+    "references": [
+        {
+            "name": "Tracey West and Katherine Noll",
+            "reference": "the best Electric-type Pokémon and the best Pokémon overall. If a person were to go around and ask Pokémon players who their favourite Pokémon was, they would \"almost always\" choose Pikachu."
+        }
+    ],
+    "projects": [
+        {
+            "name": "Poket Monsters: Red and Green",
+            "description": "handheld game",
+            "highlights": [
+                "Pokémon is short for “Pocket Monsters\", the original Japanese name.",
+                "The franchise has its roots in a gaming magazine in the early 1980s in Japan—Game Freak",
+                "started by Satoshi Tajiri and Ken Sugimori"
+            ],
+            "keywords": [
+                "Pokémon",
+                "Game",
+                "handheld"
+            ],
+            "startDate": "2005",
+            "endDate": "2019-10-11",
+            "url": "https://web.archive.org/web/20130322150210/http://www.chuangyi.com.sg/english/sud_pages/pokemon/pm/pm.htm",
+            "roles": [
+                "Pokedex",
+                "card"
+            ],
+            "entity": "Whoosh",
+            "type": "table game"
+        },
+        {   "name": "Pokémon Gold and Silver",
+            "description": "Game Boy Color game"
+        },
+        {   "name": "Pokémon Emerald",
+            "description": "Game Boy Advance game"
+        },
+        {   "name": "Pokémon Trozei!",
+            "description": "Game for Nonetendo DS"
+        },
+        {   "name": "Pokémon GO",
+            "description": "Smartphone game"
+        }
+    ],
+    "meta": {
+        "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+        "version": "v1.0.0",
+        "lastModified": "2017-12-24T15:53:00"
+    }
+}

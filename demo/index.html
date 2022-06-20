@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsonresume-element use demo</title>
+    <script src="../jsonresume-element.js" type="module"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap');
+        body{font-family: 'Source Code Pro', monospace;}
+        strong{font-weight: 500;}
+    </style>
+</head>
+<body>
+    <a href="tech-demo.html">Tech demo</a>
+
+    <fieldset>
+        <legend> shadow-dom-element prototype </legend>
+
+        <template id="json-resume">
+
+            <section>
+                <slot name="basics"> basics </slot>
+            </section>
+            <section>
+                <slot name="activities"> activities </slot>
+            </section>
+            <section>
+                <slot name="personal-aspects"> personal aspects </slot>
+            </section>
+        </template>
+        <template id="basics">
+            <header>
+                <h1><slot name="name">@basics.name</slot></h1>
+                <label><slot name="label">@label</slot></label>
+                <slot name="image">@image</slot>
+                <slot name="url">@url</slot>
+                <b><slot name="phone">@phone</slot></b>
+                <b><slot name="email">@email</slot></b>
+            </header>
+        </template>
+        <template id="personal-details">
+                <h2>personal details</h2>
+                <p><slot name="basics.summary">@basics.summary</slot></p>
+        </template>
+        <template id="employment">
+                <h2>employment</h2>
+                <slot></slot>
+        </template>
+        <template id="work">
+                <b><slot name="name"></slot>,</b>
+                <strong><slot name="location"></slot></strong> - <i><slot name="position"></slot></i>
+                <div><slot name="description"></slot></div>
+                Accomplishments:
+                    <ul>
+                        <slot name="highlights"></slot>
+                    </ul>
+        </template>
+        <template id="highlights">
+                <li><slot name="highlights-element"></slot></li>
+        </template>
+        <template id="education">
+                <h2>education</h2>
+                <b><slot name="institution"></slot></b> -
+                <slot name="studyType"></slot> of
+                <slot name="area"></slot>
+                <div><slot name="score"></slot>
+                </div>
+        </template>
+        <template id="projects">
+            <h2>projects</h2>
+            <slot></slot>
+        </template>
+        <template id="project">
+            <div>
+                <b><slot name="name"></slot></b> -
+                <slot name="description"></slot>
+            </div>
+        </template>
+        <template id="project-highlight">
+                <div><slot></slot></div>
+        </template>
+        <template id="skills">
+            <h2>Skills/Abilities</h2>
+            <slot></slot>
+        </template>
+        <template id="skill">
+            <div>
+                - <slot name="name"></slot>,
+                <slot name="level"></slot>
+            </div>
+        </template>
+        <template id="awards">
+            <h2>Awards</h2>
+            <slot></slot>
+        </template>
+        <template id="award">
+            <div>
+                - <slot name="title"></slot>
+            </div>
+        </template>
+        <template id="languages">
+            <h2>Languages</h2>
+            <slot></slot>
+        </template>
+        <template id="language">
+            <div>
+                - <slot name="language"></slot>
+                (<slot name="fluency"></slot>)
+            </div>
+        </template>
+
+
+
+        <shadow-dom-element for="json-resume">
+            <span slot="basics">
+                <shadow-dom-element for="basics">
+                    <div slot="name">Pikachu</div>
+                    <div slot="label">Programmer' Familiar</div>
+                    <div slot="image"><img src="https://upload.wikimedia.org/wikipedia/en/a/a6/Pok%C3%A9mon_Pikachu_art.png"/></div>
+                    <div slot="url"><a href="https://en.wikipedia.org/wiki/Pikachu">https://en.wikipedia.org/wiki/Pikachu</a> </div>
+                    <div slot="phone"><a href="tel://(555) 555-4321">(555) 555-4321</a> </div>
+                    <div slot="email"><a href="Pikachu@Nintendo.com">Pikachu@Nintendo.com</a> </div>
+                </shadow-dom-element>
+            </span>
+
+            <span slot="activities">
+                <shadow-dom-element for="personal-details">
+                    <span slot="basics.summary">I am famous Pokémon with super strong technical skills (turning on computer without direct contact) as well as interpersonal skills (living in every smartphone). I am eager to be challenged in order to grow and increase my level and skills.
+                    </span>
+                </shadow-dom-element>
+                <shadow-dom-element for="employment">
+                    <shadow-dom-element for="work">
+                        <span slot="name">Great Detective Pikachu</span>
+                        <span slot="location">Nintendo</span>
+                        <span slot="description">The game is a spin-off of the Pokémon franchise, in which the player works with a talking Pikachu to solve various mysteries.</span>
+                        <span slot="position">Detective</span>
+                        <span slot="highlights">
+                            <shadow-dom-element for="highlights">
+                                <span slot="highlights-element">retrieving a stolen necklace from thieving Aipom.</span>
+                                <span slot="highlights-element">Harry had gone missing following a mysterious car crash that happened the same time Pikachu got amnesia.</span>
+                                <span slot="highlights-element">Tim and Pikachu deduce that Harry was last seen trying to investigate Litwick Cave, and arrive just in time to rescue GNN reporter Meiko Okamoto and her assistant Emilia Christie from a rampaging Glalie</span>
+                            </shadow-dom-element>
+                        </span>
+                    </shadow-dom-element>
+                </shadow-dom-element>
+                <shadow-dom-element for="education">
+                    <span slot="institution">Pokémon school</span>
+                    <span slot="studyType">Doctor</span>
+                    <span slot="score">5.1 GPA</span>
+                    <span slot="area">Philosophy</span>
+                </shadow-dom-element>
+                <shadow-dom-element for="projects">
+                    <shadow-dom-element for="project" slot="">
+                        <span slot="name">Poket Monsters: Ren and Green</span>
+                        <span slot="description">handheld game</span>
+                        <shadow-dom-element for="project-highlight" slot="">
+                            <span slot="">Pokémon is short for “Pocket Monsters", the original Japanese name.</span>
+                            <span slot="">The franchise has its roots in a gaming magazine in the early 1980s in Japan—Game Freak</span>
+                            <span slot="">started by Satoshi Tajiri and Ken Sugimori</span>
+                        </shadow-dom-element>
+                    </shadow-dom-element>
+                    <shadow-dom-element for="project" slot="">
+                        <span slot="name">Pokémon Gold and Silver</span>
+                        <span slot="description">Game Boy Color game</span>
+                    </shadow-dom-element>
+                    <shadow-dom-element for="project" slot="">
+                        <span slot="name">Pokémon Emerald</span>
+                        <span slot="description">Game Boy Advance game</span>
+                    </shadow-dom-element>
+                    <shadow-dom-element for="project" slot="">
+                        <span slot="name">Pokémon Trozei!</span>
+                        <span slot="description">Game for Nonetendo DS</span>
+                    </shadow-dom-element>
+                    <shadow-dom-element for="project" slot="">
+                        <span slot="name">Pokémon GO</span>
+                        <span slot="description">Smartphone game</span>
+                    </shadow-dom-element>
+                </shadow-dom-element>
+            </span>
+            <span slot="personal-aspects">
+                <shadow-dom-element for="skills" slot="" >
+                    <shadow-dom-element for="skill" slot="" >
+                        <span slot="name">Thunder Armor move</span>
+                        <span slot="level">Master</span>
+                    </shadow-dom-element>
+                    <shadow-dom-element for="skill" slot="" >
+                        <span slot="name">Counter Shield move</span>
+                        <span slot="level">Master</span>
+                    </shadow-dom-element>
+                </shadow-dom-element>
+
+                <shadow-dom-element for="awards" slot="" >
+                    <shadow-dom-element for="award" slot="" >
+                        <span slot="title">The Best Pokemon in the world</span>
+                    </shadow-dom-element>
+                    <shadow-dom-element for="award" slot="" >
+                        <span slot="title">Win 100500 battles all over the world</span>
+                    </shadow-dom-element>
+                </shadow-dom-element>
+
+                <shadow-dom-element for="languages" slot="" >
+                    <shadow-dom-element for="language" slot="" >
+                        <span slot="language">Japanese</span>
+                        <span slot="fluency">native</span>
+                    </shadow-dom-element>
+                    <shadow-dom-element for="language" slot="" >
+                        <span slot="language">French</span>
+                        <span slot="fluency">intermediate high</span>
+                    </shadow-dom-element>
+                    <shadow-dom-element for="language" slot="" >
+                        <span slot="language">Spanish</span>
+                        <span slot="fluency">beginner</span>
+                    </shadow-dom-element>
+                    <shadow-dom-element for="language" slot="" >
+                        <span slot="language">German</span>
+                        <span slot="fluency">beginner</span>
+                    </shadow-dom-element>
+                    <shadow-dom-element for="language" slot="" >
+                        <span slot="language">Italian</span>
+                        <span slot="fluency">beginner</span>
+                    </shadow-dom-element>
+                    <shadow-dom-element for="language" slot="" >
+                        <span slot="language">Korean</span>
+                        <span slot="fluency">native</span>
+                    </shadow-dom-element>
+                </shadow-dom-element>
+
+
+            </span>
+        </shadow-dom-element>
+
+
+    </fieldset>
+    <fieldset>
+        <legend> native shadow DOM prototype </legend>
+        <template shadowroot="open">
+            <header>
+                <slot name="basics">@basics</slot>
+            </header>
+        </template>
+        <div slot="basics">
+            <template shadowroot="open">
+                <h1><slot name="name">@basics.name</slot></h1>
+                <label><slot name="label">@label</slot></label>
+                <slot name="image">@image</slot>
+                <slot name="url">@url</slot>
+                <b><slot name="phone">@phone</slot></b>
+                <b><slot name="email">@email</slot></b>
+            </template>
+            <div slot="name">Pikachu</div>
+            <div slot="label">Programmer' Familiar</div>
+            <div slot="image"><img src="https://upload.wikimedia.org/wikipedia/en/a/a6/Pok%C3%A9mon_Pikachu_art.png"/></div>
+            <div slot="url"><a href="https://en.wikipedia.org/wiki/Pikachu">https://en.wikipedia.org/wiki/Pikachu</a> </div>
+            <div slot="phone"><a href="tel://(555) 555-4321">(555) 555-4321</a> </div>
+            <div slot="email"><a href="Pikachu@Nintendo.com">Pikachu@Nintendo.com</a> </div>
+        </div>
+
+    </fieldset>
+    <jsonresume-element
+        src="sample.resume.json"
+        code="../template-light.html"
+    ></jsonresume-element>
+    Inspired by <a href="https://lionell.github.io/technical-resume-analysis">lionell's Technical Resume Analysis</a>
+</body>
+</html>
