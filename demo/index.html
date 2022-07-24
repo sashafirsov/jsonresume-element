@@ -5,10 +5,16 @@
     <title>jsonresume-element use demo</title>
     <script src="../jsonresume-element.js" type="module"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap');
         body{font-family: 'Source Code Pro', monospace;}
         strong{font-weight: 500;}
         a { overflow-wrap: anywhere; }
+        :root{
+            --section-heading-color:#37B;
+            --section-heading-text-transform:uppercase;
+            --section-heading-font:'Barlow Semi Condensed', sans-serif;
+        }
     </style>
 </head>
 <body>
@@ -19,9 +25,10 @@
 
         <template id="json-resume">
             <style>
-                :host,main{ display: flex; flex-wrap: wrap; gap: 2rem; }
+                :host,main{ display: flex; flex-wrap: wrap; gap: 2rem;}
                 main>*,section{ flex: 1 1 11rem; }
                 main>*:first-child{ flex: 10; }
+
             </style>
             <section>
                 <slot name="basics"> basics </slot>
@@ -35,9 +42,17 @@
                 </div>
             </main>
         </template>
+        <template id="section-heading">
+            <style>h2{
+                color:var(--section-heading-color);
+                text-transform: var(--section-heading-text-transform);
+                font-family: var(--section-heading-font);
+            }</style>
+            <h2><slot></slot></h2>
+        </template>
         <template id="basics">
             <style>
-                header,div{display: flex; gap:1rem; justify-content: space-between; align-items: flex-start; }
+                header,div{display: flex; gap:1rem; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;}
                 div{ flex-direction: column; }
                 header>div:first-child{ flex-direction: row; }
                 header>div:last-child{ width: 15rem; }
@@ -58,12 +73,16 @@
             </header>
         </template>
         <template id="personal-details">
-                <h2>personal details</h2>
-                <p><slot name="basics.summary">@basics.summary</slot></p>
+            <shadow-dom-element for="section-heading">
+                personal details
+            </shadow-dom-element>
+            <p><slot name="basics.summary">@basics.summary</slot></p>
         </template>
         <template id="employment">
-                <h2>employment</h2>
-                <slot></slot>
+            <shadow-dom-element for="section-heading">
+                employment
+            </shadow-dom-element>
+            <slot></slot>
         </template>
         <template id="work">
                 <b><slot name="name"></slot>,</b>
@@ -78,15 +97,20 @@
                 <li><slot name="highlights-element"></slot></li>
         </template>
         <template id="education">
-                <h2>education</h2>
-                <b><slot name="institution"></slot></b> -
-                <slot name="studyType"></slot> of
-                <slot name="area"></slot>
-                <div><slot name="score"></slot>
-                </div>
+            <shadow-dom-element for="section-heading">
+                education
+            </shadow-dom-element>
+            <b><slot name="institution"></slot></b> -
+            <slot name="studyType"></slot> of
+            <slot name="area"></slot>
+            <div>
+                <slot name="score"></slot>
+            </div>
         </template>
         <template id="projects">
-            <h2>projects</h2>
+            <shadow-dom-element for="section-heading">
+                projects
+            </shadow-dom-element>
             <slot></slot>
         </template>
         <template id="project">
@@ -99,7 +123,9 @@
                 <div><slot></slot></div>
         </template>
         <template id="skills">
-            <h2>Skills/Abilities</h2>
+            <shadow-dom-element for="section-heading">
+                Skills/Abilities
+            </shadow-dom-element>
             <slot></slot>
         </template>
         <template id="skill">
@@ -109,7 +135,9 @@
             </div>
         </template>
         <template id="awards">
-            <h2>Awards</h2>
+            <shadow-dom-element for="section-heading">
+                Awards
+            </shadow-dom-element>
             <slot></slot>
         </template>
         <template id="award">
@@ -118,7 +146,9 @@
             </div>
         </template>
         <template id="languages">
-            <h2>Languages</h2>
+            <shadow-dom-element for="section-heading">
+                Languages
+            </shadow-dom-element>
             <slot></slot>
         </template>
         <template id="language">
