@@ -8,6 +8,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap');
         body{font-family: 'Source Code Pro', monospace;}
         strong{font-weight: 500;}
+        a { overflow-wrap: anywhere; }
     </style>
 </head>
 <body>
@@ -17,25 +18,43 @@
         <legend> shadow-dom-element prototype </legend>
 
         <template id="json-resume">
-
+            <style>
+                :host,main{ display: flex; flex-wrap: wrap; gap: 2rem; }
+                main>*,section{ flex: 1 1 11rem; }
+                main>*:first-child{ flex: 10; }
+            </style>
             <section>
                 <slot name="basics"> basics </slot>
             </section>
-            <section>
-                <slot name="activities"> activities </slot>
-            </section>
-            <section>
-                <slot name="personal-aspects"> personal aspects </slot>
-            </section>
+            <main>
+                <div>
+                    <slot name="activities"> activities </slot>
+                </div>
+                <div>
+                    <slot name="personal-aspects"> personal aspects </slot>
+                </div>
+            </main>
         </template>
         <template id="basics">
+            <style>
+                header,div{display: flex; gap:1rem; justify-content: space-between; align-items: flex-start; }
+                div{ flex-direction: column; }
+                header>div:first-child{ flex-direction: row; }
+                header>div:last-child{ width: 15rem; }
+            </style>
             <header>
-                <h1><slot name="name">@basics.name</slot></h1>
-                <label><slot name="label">@label</slot></label>
-                <slot name="image">@image</slot>
-                <slot name="url">@url</slot>
-                <b><slot name="phone">@phone</slot></b>
-                <b><slot name="email">@email</slot></b>
+                <div>
+                    <div>
+                        <h1><slot name="name">@basics.name</slot></h1>
+                        <label><slot name="label">@label</slot></label>
+                    </div>
+                    <slot name="image">@image</slot>
+                </div>
+                <div>
+                    <slot name="url">@url</slot>
+                    <b><slot name="phone">@phone</slot></b>
+                    <b><slot name="email">@email</slot></b>
+                </div>
             </header>
         </template>
         <template id="personal-details">
@@ -240,12 +259,19 @@
         </template>
         <div slot="basics">
             <template shadowroot="open">
-                <h1><slot name="name">@basics.name</slot></h1>
-                <label><slot name="label">@label</slot></label>
+                <style>
+                    :host{ display: flex; }
+                </style>
+                <section>
+                    <h1><slot name="name">@basics.name</slot></h1>
+                    <label><slot name="label">@label</slot></label>
+                </section>
                 <slot name="image">@image</slot>
-                <slot name="url">@url</slot>
-                <b><slot name="phone">@phone</slot></b>
-                <b><slot name="email">@email</slot></b>
+                <section>
+                    <slot name="url">@url</slot>
+                    <b><slot name="phone">@phone</slot></b>
+                    <b><slot name="email">@email</slot></b>
+                </section>
             </template>
             <div slot="name">Pikachu</div>
             <div slot="label">Programmer' Familiar</div>
